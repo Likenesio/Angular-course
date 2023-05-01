@@ -4,12 +4,12 @@ import { __values } from 'tslib';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyFirstComponent } from './my-first/my-first.component';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyFirstComponent
+    PersonComponent
   ],
   imports: [
     BrowserModule,
