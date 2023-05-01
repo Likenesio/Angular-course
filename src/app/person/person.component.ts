@@ -8,8 +8,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class PersonComponent implements OnInit {
 
   @Input() name: string= "";
-  @Input() lastname: string="";
-  @Input() age: number= 0;
+  @Input() lastName: string="";
+  @Input() age: number= Number("0");
 
   @Output() print= new EventEmitter;
   
@@ -18,7 +18,11 @@ export class PersonComponent implements OnInit {
   ngOnInit() {
   }
  
-  onPrint(even: any){
-    this.print.emit("hola");
+  onPrint(event: any){
+    this.print.emit({
+      name: this.name,
+      lastname: this.lastName,
+      age: this.age
+    })
   }
 }
