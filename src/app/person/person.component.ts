@@ -19,6 +19,6 @@ export class PersonComponent implements OnInit {
   }
  
   onPrint(even: any){
-    
+    this.print.emit("hola");
   }
 }

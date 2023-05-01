@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'test';
+
+  getPrint(event: string){
+    console.log(event);
+  }
 }
