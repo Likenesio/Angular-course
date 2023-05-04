@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { IPerson, Person } from './person';
+import { IPerson} from './person.model';
 
 @Component({
   selector: 'app-person',
@@ -12,7 +12,7 @@ export class PersonComponent implements OnInit {
   @Input() lastName: string='';
   @Input() age: number= Number("0");
 
-  @Output() print= new EventEmitter<<IPerson>();
+  @Output() print= new EventEmitter<IPerson>();
   
   constructor() { }
 
