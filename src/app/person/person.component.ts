@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { IPerson, Person } from './person';
 
 @Component({
   selector: 'app-person',
@@ -11,14 +12,14 @@ export class PersonComponent implements OnInit {
   @Input() lastName: string='';
   @Input() age: number= Number("0");
 
-  @Output() print= new EventEmitter<any>();
+  @Output() print= new EventEmitter<Person>();
   
   constructor() { }
 
   ngOnInit() {
   }
  
-  onPrint(event: any){
+  public onPrint(event: any){
     this.print.emit({
       name: this.name,
       lastName: this.lastName,
