@@ -12,7 +12,7 @@ export class PersonComponent implements OnInit {
   @Input() lastName: string='';
   @Input() age: number= Number("0");
 
-  @Output() print= new EventEmitter<Person>();
+  @Output() print= new EventEmitter<<IPerson>();
   
   constructor() { }
 
